@@ -1,31 +1,31 @@
 #include <stdio.h>
 #include <time.h>
 
-// Tarih bilgilerini saklamak için struct tanýmlama
+// Tarih bilgilerini saklamak iÃ§in struct tanÄ±mlama
 struct TarihSaat {
     int yil, ay, gun, saat, dakika, saniye;
 };
 
-// Tarih ve saati epoch'a dönüþtürme fonksiyonu
+// Tarih ve saati epoch'a dÃ¶nÃ¼ÅŸtÃ¼rme fonksiyonu
 time_t epochZamaninaDonustur(struct TarihSaat ts) {
     struct tm zamanBilgisi;
-    zamanBilgisi.tm_year = ts.yil - 1900; // yýl 1900'den baþlar
-    zamanBilgisi.tm_mon = ts.ay - 1; // ay 0'dan baþlar
+    zamanBilgisi.tm_year = ts.yil - 1900; // yÄ±l 1900'den baÅŸlar
+    zamanBilgisi.tm_mon = ts.ay - 1; // ay 0'dan baÅŸlar
     zamanBilgisi.tm_mday = ts.gun;
     zamanBilgisi.tm_hour = ts.saat;
     zamanBilgisi.tm_min = ts.dakika;
     zamanBilgisi.tm_sec = ts.saniye;
-    zamanBilgisi.tm_isdst = -1; // yaz saati uygulamasý bilgisi yok
+    zamanBilgisi.tm_isdst = -1; // yaz saati uygulamasÄ± bilgisi yok
     return mktime(&zamanBilgisi);
 }
 
-// Tarih ve saat bilgilerini kullanýcýdan alma fonksiyonu
+// Tarih ve saat bilgilerini kullanÄ±cÄ±dan alma fonksiyonu
 void kullaniciGirdisi(struct TarihSaat *ts) {
-    printf("Yýl: ");
+    printf("YÄ±l: ");
     scanf("%d", &ts->yil);
     printf("Ay: ");
     scanf("%d", &ts->ay);
-    printf("Gün: ");
+    printf("GÃ¼n: ");
     scanf("%d", &ts->gun);
     printf("Saat: ");
     scanf("%d", &ts->saat);
@@ -39,25 +39,25 @@ int main() {
     struct TarihSaat ts1, ts2;
     time_t epochZamani1, epochZamani2;
     
-    // Kullanýcýdan ilk tarihi al
+    // KullanÄ±cÄ±dan ilk tarihi al
     printf("Birinci tarih ve saati giriniz:\n");
     kullaniciGirdisi(&ts1);
     
-    // Kullanýcýdan ikinci tarihi al
-    printf("Ýkinci tarih ve saati giriniz:\n");
+    // KullanÄ±cÄ±dan ikinci tarihi al
+    printf("Ä°kinci tarih ve saati giriniz:\n");
     kullaniciGirdisi(&ts2);
     
-    // Epoch zamanýna dönüþtür
+    // Epoch zamanÄ±na dÃ¶nÃ¼ÅŸtÃ¼r
     epochZamani1 = epochZamaninaDonustur(ts1);
     epochZamani2 = epochZamaninaDonustur(ts2);
     
-    // Zaman farkýný hesapla
+    // Zaman farkÄ±nÄ± hesapla
     double fark = difftime(epochZamani2, epochZamani1);
     
-    // Sonuçlarý yazdýr
-    printf("Birinci tarih epoch zamaný: %ld\n", (long)epochZamani1);
-    printf("Ýkinci tarih epoch zamaný: %ld\n", (long)epochZamani2);
-    printf("Ýki tarih arasýndaki fark: %.0f saniye\n", fark);
+    // SonuÃ§larÄ± yazdÄ±r
+    printf("Birinci tarih epoch zamanÄ±: %ld\n", (long)epochZamani1);
+    printf("Ä°kinci tarih epoch zamanÄ±: %ld\n", (long)epochZamani2);
+    printf("Ä°ki tarih arasÄ±ndaki fark: %.0f saniye\n", fark);
     
     return 0;
 }
