@@ -17,7 +17,15 @@ Bu program, kullanıcıdan iki farklı tarih ve saat bilgisi alır, bu bilgileri
 3. İkinci tarih ve saat bilgilerini girin (örneğin: 2023, 4, 6, 15, 45, 30).
 4. Program, girilen tarih ve saat bilgilerini epoch zamanına dönüştürecek ve iki tarih arasındaki zaman farkını ekrana yazdıracaktır.
 
-## Kod
+## Günlük Hayat Uygulması: Toplantı Planlayıcı
+Bu proje, kullanıcı tarafından girilen toplantı bilgilerini epoch zamanına dönüştüren ve toplantıya kalan süreyi hesaplayan bir C programını içerir.
+
+## Kullanılan Yapılar
+
+1. struct TarihSaat: Tarih ve saat bilgilerini saklamak için kullanılır.
+2. struct Toplanti: Toplantı bilgilerini saklamak için kullanılır.
+
+## Epoch Kodu
 
 ```c
 #include <stdio.h>
