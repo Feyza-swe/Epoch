@@ -22,8 +22,8 @@ Bu proje, kullanıcı tarafından girilen toplantı bilgilerini epoch zamanına 
 
 ## Kullanılan Yapılar
 
-1. struct TarihSaat: Tarih ve saat bilgilerini saklamak için kullanılır.
-2. struct Toplanti: Toplantı bilgilerini saklamak için kullanılır.
+1. 'struct TarihSaat': Tarih ve saat bilgilerini saklamak için kullanılır.
+2. 'struct Toplanti': Toplantı bilgilerini saklamak için kullanılır.
 
 ## Epoch Kodu
 
