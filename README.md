@@ -15,7 +15,7 @@ Bu program, kullanıcıdan iki farklı tarih ve saat bilgisi alır, bu bilgileri
 1. Programı çalıştırın.
 2. İlk tarih ve saat bilgilerini girin (örneğin: 2023, 4, 5, 12, 30, 45).
 3. İkinci tarih ve saat bilgilerini girin (örneğin: 2023, 4, 6, 15, 45, 30).
-4. Program, girilen tarih ve saat bilgilerini epoch zamanına dönüştürecek ve iki tarih arasındaki zaman farkını saniye cinsinden ekrana yazdıracaktır.
+4. Program, girilen tarih ve saat bilgilerini epoch zamanına dönüştürecek ve iki tarih arasındaki zaman farkını ekrana yazdıracaktır.
 
 ## Kod
 
